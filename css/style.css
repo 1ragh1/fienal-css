@@ -1,0 +1,140 @@
+
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container{
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 16px 0 32px;
+}
+
+
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus{
+  left: 10px;
+}
+
+
+.site-header{
+  padding: 14px 4%;
+  background: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+}
+
+.site-header h1{
+  margin: 0 0 8px;
+}
+
+.nav-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;          
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-list a{
+  display: inline-block;
+  padding: 10px 14px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 999px;
+  color: #111;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease; 
+}
+
+.nav-list a:hover{
+  background: #e8e8e8;
+  transform: translateY(-2px);
+}
+
+.nav-list a:focus{
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+.nav-list a.active{
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+  border: 2px solid #999;     
+  padding: 6px;               
+  border-radius: 16px;        
+}
+
+
+.gallery{
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.gallery figure{
+  margin: 0;
+  padding: 10px;
+  border: 2px solid #e2e2e2;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.gallery figcaption{
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+
+.gallery figure:nth-child(even) img{
+  border-radius: 40px;
+}
+
+
+.about-flex{
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.about-flex > div{
+  flex: 1 1 320px;
+}
+
+.about-flex figure{
+  flex: 1 1 320px;
+  margin: 0;
+}
+
+
+.site-footer{
+  border-top: 2px solid #ddd;
+  padding: 14px 4%;
+  background: #f4f4f4;
+}
